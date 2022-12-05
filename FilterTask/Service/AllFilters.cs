@@ -34,11 +34,14 @@ namespace FilterTask.Service
             var ActionName = context.RouteData.Values["action"].ToString();
             context.HttpContext.Response.Headers.Add("ActionName", ActionName);
             ////Method Name
-            if (context.ActionDescriptor is ControllerActionDescriptor controllerDescriptor)
-            {
-                var methodName = controllerDescriptor.MethodInfo;
-                context.HttpContext.Response.Headers["Method-Name"] = methodName.Name;
-            }
+            ///
+            var MethodName = context.HttpContext.Request.Method;
+            context.HttpContext.Response.Headers.Add("MethodName", MethodName);
+            //if (context.ActionDescriptor is ControllerActionDescriptor controllerDescriptor)
+            //{
+            //    var methodName = controllerDescriptor.MethodInfo;
+            //    context.HttpContext.Response.Headers["Method-Name"] = methodName.Name;
+            //}
             //Display Scheme Filter
             var Scheme = context.HttpContext.Request.Scheme + ":" + context.HttpContext.Request.Host;
             context.HttpContext.Response.Headers.Add("Scheme", Scheme);

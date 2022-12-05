@@ -14,8 +14,9 @@ namespace FilterTask.Controllers
         //[ServiceFilter(typeof(MethodNameFilters), Order = 3)]
 
         //[ServiceFilter(typeof(actionFilters), Order = 1)]
-        [HttpGet(Name = "Getv")]
-        public IEnumerable<string> Get()
+        //[HttpGet(Name = "Getv")]
+        [HttpGet]
+        public IEnumerable<string> Getttt()
         {
             Thread.Sleep(1000);
             return new string[] { "value1", "value2" };
