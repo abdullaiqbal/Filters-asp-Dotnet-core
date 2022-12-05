@@ -1,5 +1,5 @@
 # Filters-asp-Dotnet-core
-1. "AllFilters.cs" File contains All the filters related to the Action
+1. "AllFilters.cs" File in Service Folder contains All the filters related to the Action
 2. In "Pregram.cs" File:
 //This Will Apply On All The Actions
  builder.Services.AddMvc(options =>
