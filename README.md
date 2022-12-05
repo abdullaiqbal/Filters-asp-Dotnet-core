@@ -1,11 +1,3 @@
 # Filters-asp-Dotnet-core
-1. "AllFilters.cs" File in Service Folder contains All the filters related to the Action
-2. In "Pregram.cs" File:
-//This Will Apply On All The Actions
- builder.Services.AddMvc(options =>
-{
-    options.Filters.Add(new AllFilters());
-});
-
-// Register IActionResponseTimeStopwatch
-builder.Services.AddScoped<IActionResponseTimeStopwatch, ActionResponseTimeStopwatch>();
+1. Run The Project and run the Gettt action of Values Controller
+2. You can see Response time, Controller Name, Action Name, Method Name, Port, Host, Scheme in the response Header
